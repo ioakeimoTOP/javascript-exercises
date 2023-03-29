@@ -13,6 +13,9 @@ describe('sumAll', () => {
   test.skip('returns ERROR with negative numbers', () => {
     expect(sumAll(-10, 4)).toEqual('ERROR');
   });
+  test.skip('returns ERROR with NaN parameters', () => {
+    expect(sumAll(10, NaN)).toEqual('ERROR');
+  });
   test.skip('returns ERROR with non-number parameters', () => {
     expect(sumAll(10, "90")).toEqual('ERROR');
   });
